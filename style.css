@@ -113,6 +113,10 @@ body {
   font-size: var(--font-size-md);
 }
 
+.nav__link:hover {
+  color: var(--color-brand-hover);
+}
+
 .hero {
   display: flex;
   align-items: center;
