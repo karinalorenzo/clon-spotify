@@ -151,7 +151,6 @@ body {
   font-family: "Montserrat";
   text-align: center;
   color: var(--color-text-primary);
-  align-items: center;
 }
 
 .features {
@@ -160,7 +159,8 @@ body {
   padding: var(--spacing-2xl) 0;
 }
 
-.section-title {
+.section-title,
+.second-section-title {
   text-align: center;
   margin-bottom: var(--spacing-lg);
   font-size: var(--font-size-lg);
@@ -173,6 +173,15 @@ body {
   width: 14rem;
   height: 0.2rem;
   background-color: var(--color-brand);
+  margin: var(--spacing-sm) auto 0;
+}
+
+.second-section-title::after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 0.2rem;
+  background-color: var(--color-bg-light);
   margin: var(--spacing-sm) auto 0;
 }
 
@@ -213,6 +222,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
+}
+
+.extra__content {
+  text-align: left;
 }
 
 .extra-card__title {
@@ -325,12 +338,17 @@ body {
     font-size: var(--font-size-md);
   }
 
-  .section-title {
+  .section-title,
+  .second-section-title {
     font-size: var(--font-size-xl);
   }
 
   .section-title::after {
     width: 18rem;
+  }
+
+  .second-section-title::after {
+    width: 14rem;
   }
 
   .features__grid {
@@ -395,7 +413,8 @@ body {
     font-size: var(--font-size-lg);
   }
 
-  .section-title {
+  .section-title,
+  .second-section-title {
     font-size: var(--font-size-2xl);
   }
 
