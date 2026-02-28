@@ -51,9 +51,10 @@ a {
 
 body {
   font-family: var(--font-base);
+  font-size: var(--font-size-base);
   background: var(--color-bg-dark);
   color: var(--color-text-primary);
-  font-size: var(--font-size-base);
+  padding-top: var(--spacing-xl);
 }
 
 .container {
@@ -65,7 +66,10 @@ body {
 .header {
   background: var(--color-bg-light);
   padding: var(--spacing-md) 0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
 }
 
