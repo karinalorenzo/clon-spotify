@@ -422,4 +422,9 @@ body {
     width: 28rem;
     height: 0.3rem;
   }
+
+  .second-section-title::after {
+    width: 20rem;
+    height: 0.3rem;
+  }
 }
