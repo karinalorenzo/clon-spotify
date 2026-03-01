@@ -143,13 +143,11 @@ body {
   font-weight: var(--font-weight-medium);
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   margin-bottom: var(--spacing-md);
-  text-align: center;
 }
 
 .hero__subtitle {
   font-size: var(--font-size-xs);
-  font-family: "Montserrat";
-  text-align: center;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   color: var(--color-text-primary);
 }
 
@@ -187,8 +185,8 @@ body {
   display: block;
   width: 16rem;
   height: 0.2rem;
-  background-color: var(--color-bg-light); margin-top: var(--spacing-sm);
- 
+  background-color: var(--color-bg-light);
+  margin-top: var(--spacing-sm);
 }
 
 .features__grid {
@@ -247,7 +245,6 @@ body {
 }
 
 .extra-card__text {
-  color: var(--color-text-primary);
   font-size: var(--font-size-base);
 }
 
@@ -274,42 +271,13 @@ body {
   font-size: var(--font-size-sm);
 }
 
-.nav__toggle {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--color-text-dark);
-  display: block;
-}
-
-.nav__menu {
-  display: none;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  background: white;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-md);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.nav__menu.is-active {
-  display: flex;
-}
-
 @media (min-width: 768px) {
   .nav {
-    display: flex;
-    align-items: center;
     padding-left: var(--spacing-lg);
     padding-right: var(--spacing-lg);
   }
 
   .nav__logo img {
-    height: var(--spacing-xl);
     height: 40px;
   }
 
@@ -328,13 +296,7 @@ body {
   }
 
   .nav__link {
-    font-size: var(--font-size-md);
-    font-family: "DM Sans", Helvetica, Arial, sans-serif;
     font-weight: var(--font-weight-regular);
-  }
-
-  .nav__link:hover {
-    color: var(--color-brand-hover);
   }
 
   .hero {
@@ -365,7 +327,6 @@ body {
 
   .features__grid {
     flex-direction: row;
-    padding-top: var(--spacing-lg) 0 var(--spacing-xl);
   }
 
   .extra__grid {
@@ -377,14 +338,8 @@ body {
 
 @media (min-width: 1440px) {
   .nav {
-    display: flex;
-    align-items: center;
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
-  }
-
-  .nav__logo {
-    margin-right: auto;
   }
 
   .nav__logo img {
@@ -393,29 +348,16 @@ body {
   }
 
   .nav__menu {
-    display: flex;
     gap: var(--spacing-xl);
-    margin-left: auto;
-  }
-
-  .nav__toggle {
-    display: none;
-  }
-
-  .nav__link {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-regular);
   }
 
   .hero {
     min-height: 90vh;
-    background-position: top center;
     padding: var(--spacing-2xl) 0;
   }
 
   .hero__content {
     max-width: 800px;
-    margin: 0 auto;
   }
 
   .hero__title {
