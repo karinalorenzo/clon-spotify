@@ -156,7 +156,7 @@ body {
 .features {
   background: var(--color-bg-light);
   color: var(--color-text-dark);
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-lg) 0 var(--spacing-2xl);
 }
 
 .section-title {
@@ -187,8 +187,8 @@ body {
   display: block;
   width: 16rem;
   height: 0.2rem;
-  background-color: var(--color-bg-light);
-  margin-top: var(--spacing-sm);
+  background-color: var(--color-bg-light); margin-top: var(--spacing-sm);
+ 
 }
 
 .features__grid {
@@ -221,7 +221,7 @@ body {
 .extra {
   background: var(--color-brand);
   color: var(--color-text-primary);
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-lg) 0 var(--spacing-2xl);
   margin: var(--spacing-lg);
 }
 
@@ -365,6 +365,7 @@ body {
 
   .features__grid {
     flex-direction: row;
+    padding-top: var(--spacing-lg) 0 var(--spacing-xl);
   }
 
   .extra__grid {
