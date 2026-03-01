@@ -1,12 +1,10 @@
 ## Project Description
 This project is a responsive recreation of the classic Spotify landing page. It focuses on clean structure, modern CSS architecture, and visual accuracy compared to the original design. The layout adapts smoothly across mobile, tablet, and desktop, using a scalable system of spacing, typography, and components. The goal was to build a polished interface while keeping the codebase organized, readable, and easy to maintain.
 
-## Screenshots (mobile and desktop)
-### Mobile  
-_Add your mobile screenshot here_
+## Screenshots (mobile, tablet and desktop)
+<img width="1469" height="581" alt="Screenshot 2026-03-01 at 20 51 19" src="https://github.com/user-attachments/assets/84dfa494-e263-42c9-9bab-82e521a4585d" />
 
-### Desktop  
-_Add your desktop screenshot here_
+
 
 ## Built with...
 - **HTML5** for semantic and accessible structure  
