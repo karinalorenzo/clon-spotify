@@ -171,7 +171,7 @@ body {
 }
 
 .hero__subtitle {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-family: var(--font-family-alt);
   color: var(--color-text-primary);
 }
@@ -223,7 +223,7 @@ body {
 
 .feature-card__text {
   color: var(--color-text-muted);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-xs);
 }
 
 
@@ -232,7 +232,6 @@ body {
   color: var(--color-text-primary);
   padding: var(--space-lg) var(--space-lg) var(--space-2xl);
   margin: var(--space-lg);
-  border-radius: var(--radius-md);
 }
 
 .extra__grid {
@@ -250,7 +249,7 @@ body {
 .second-section-title::after {
   content: "";
   display: block;
-  width: 16rem;
+  width: 170px;
   height: 3px;
   background-color: var(--color-bg-light);
   margin-top: var(--space-sm);
@@ -337,7 +336,7 @@ body {
   }
 
   .section-title::after {
-    width: 18rem;
+    width: 285px;
   }
 
   .features__grid {
@@ -384,17 +383,29 @@ body {
     font-size: var(--font-size-lg);
   }
 
+  .extra-card__title{
+    font-size: var(--font-size-xl);
+  }
+
+  .extra-card__text{
+    font-size: var(--font-size-md);
+  }
+
   .section-title {
     font-size: var(--font-size-2xl);
   }
 
+  .second-section-title{
+    font-size: var(--font-size-xl);
+  }
+
   .section-title::after {
-    width: 28rem;
+    width: 430px;
     height: 4px;
   }
 
   .second-section-title::after {
-    width: 20rem;
+    width: 435px;
     height: 4px;
   }
 }
