@@ -35,25 +35,22 @@ a {
   --color-border: #333333;
 
   /* =========================================
-     TYPOGRAPHY
+     TYPOGRAPHY (FLUID)
   ========================================= */
-  --font-family-base: "DM Sans", "Montserrat", Helvetica, Arial, sans-serif;
-  --font-family-alt: "Montserrat", Helvetica, Arial, sans-serif;
+  --fs-xs: clamp(0.75rem, 0.6rem + 0.5vw, 0.875rem);
+  --fs-sm: clamp(0.875rem, 0.7rem + 0.6vw, 1rem);
+  --fs-base: clamp(1rem, 0.8rem + 0.7vw, 1.125rem);
+  --fs-md: clamp(1.125rem, 1rem + 0.8vw, 1.5rem);
+  --fs-lg: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  --fs-xl: clamp(2rem, 1.5rem + 2vw, 3rem);
+  --fs-2xl: clamp(3rem, 2rem + 3vw, 4.5rem);
 
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-md: 1.125rem;
-  --font-size-lg: 1.5rem;
-  --font-size-xl: 2rem;
-  --font-size-2xl: 3rem;
-
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
 
   /* =========================================
-     SPACING (rem = accesible)
+     SPACING
   ========================================= */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -63,7 +60,7 @@ a {
   --space-2xl: 6rem;
 
   /* =========================================
-     RADIUS (px)
+     RADIUS
   ========================================= */
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -74,12 +71,17 @@ a {
      SHADOWS
   ========================================= */
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* =========================================
+     DECORATIVE LINES (FLUID)
+  ========================================= */
+  --line-sm: clamp(14rem, 10vw, 28rem);
+  --line-md: clamp(16rem, 12vw, 28rem);
 }
 
-
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
+  font-family: "DM Sans", "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: var(--fs-base);
   background: var(--color-bg-light);
   color: var(--color-text-primary);
   padding-top: var(--space-xl);
@@ -90,7 +92,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 .header {
   background: var(--color-bg-light);
@@ -110,7 +111,7 @@ body {
 }
 
 .nav__logo img {
-  height: 30px;
+  height: clamp(30px, 4vw, 40px);
 }
 
 .nav__toggle {
@@ -139,9 +140,9 @@ body {
 }
 
 .nav__link {
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--fw-medium);
   color: var(--color-text-dark);
-  font-size: var(--font-size-md);
+  font-size: var(--fs-md);
 }
 
 .nav__link:hover {
@@ -153,7 +154,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-2xl) 0 var(--space-xl);
+  padding-block: clamp(3rem, 6vw, 6rem);
   background-image: url("./assets/landing.jpg");
   background-size: cover;
   background-position: center;
@@ -164,36 +165,36 @@ body {
 }
 
 .hero__title {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-medium);
-  font-family: var(--font-family-alt);
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+  font-weight: var(--fw-medium);
+  font-family: "Montserrat";
   margin-bottom: var(--space-md);
 }
 
 .hero__subtitle {
-  font-size: var(--font-size-xs);
-  font-family: var(--font-family-alt);
-  color: var(--color-text-primary);
+  font-size: clamp(0.65rem, 0.5rem + 1vw, 1rem);
+  font-family: "Montserrat";
 }
-
 
 .features {
   background: var(--color-bg-light);
   color: var(--color-text-dark);
   padding: var(--space-lg) 0 var(--space-2xl);
+  text-align: center;
 }
 
-.section-title {
-  text-align: center;
+.section-title,
+.second-section-title {
   margin-bottom: var(--space-lg);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
+  font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
+  display: inline-block;
 }
 
 .section-title::after {
   content: "";
   display: block;
-  width: 14rem;
+  width: 100%;
   height: 3px;
   background-color: var(--color-brand);
   margin: var(--space-sm) auto 0;
@@ -203,29 +204,31 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
-}
-
-.feature-card {
+  align-items: center;
   text-align: center;
 }
 
+.feature-card {
+  max-width: 320px;
+  width: 100%;
+}
+
 .feature-card__icon {
-  width: 70px;
+  width: clamp(50px, 6vw, 70px);
   margin: 0 auto var(--space-md);
 }
 
 .feature-card__title {
-  font-size: var(--font-size-lg);
+  font-size: var(--fs-lg);
   color: var(--color-brand);
   margin-bottom: var(--space-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
 }
 
 .feature-card__text {
   color: var(--color-text-muted);
-  font-size: var(--font-size-xs);
+  font-size: var(--fs-xs);
 }
-
 
 .extra {
   background: var(--color-brand);
@@ -241,15 +244,15 @@ body {
 }
 
 .second-section-title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
   margin-bottom: var(--space-lg);
 }
 
 .second-section-title::after {
   content: "";
   display: block;
-  width: 170px;
+  width: 100%;
   height: 3px;
   background-color: var(--color-bg-light);
   margin-top: var(--space-sm);
@@ -260,13 +263,13 @@ body {
 }
 
 .extra-card__title {
-  font-size: var(--font-size-lg);
+  font-size: var(--fs-lg);
   margin-bottom: var(--space-sm);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--fw-bold);
 }
 
 .extra-card__text {
-  font-size: var(--font-size-base);
+  font-size: var(--fs-base);
 }
 
 .extra__icon-wrapper {
@@ -275,7 +278,7 @@ body {
 }
 
 .extra__icon {
-  width: 70px;
+  width: clamp(50px, 6vw, 70px);
   filter: brightness(0) invert(1);
 }
 
@@ -289,19 +292,15 @@ body {
   text-align: center;
   padding: var(--space-lg);
   color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  font-size: var(--fs-sm);
 }
 
 /* =========================================
-   TABLET
+   TABLET 
 ========================================= */
 @media (min-width: 768px) {
   .nav {
     padding-inline: var(--space-lg);
-  }
-
-  .nav__logo img {
-    height: 40px;
   }
 
   .nav__toggle {
@@ -323,24 +322,11 @@ body {
     background-position: top center;
   }
 
-  .hero__title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .hero__subtitle {
-    font-size: var(--font-size-md);
-  }
-
-  .section-title {
-    font-size: var(--font-size-xl);
-  }
-
-  .section-title::after {
-    width: 285px;
-  }
-
   .features__grid {
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--space-xl);
   }
 
   .extra__grid {
@@ -351,7 +337,7 @@ body {
 }
 
 /* =========================================
-   DESKTOP
+   DESKTOP 
 ========================================= */
 @media (min-width: 1440px) {
   .nav {
@@ -362,50 +348,11 @@ body {
     gap: var(--space-xl);
   }
 
-  .nav__link {
-    font-size: var(--font-size-lg);
-  }
-
   .hero {
     min-height: 90vh;
-    padding: var(--space-2xl) 0;
   }
 
   .hero__content {
     max-width: 800px;
-  }
-
-  .hero__title {
-    font-size: 4.5rem;
-  }
-
-  .hero__subtitle {
-    font-size: var(--font-size-lg);
-  }
-
-  .extra-card__title{
-    font-size: var(--font-size-xl);
-  }
-
-  .extra-card__text{
-    font-size: var(--font-size-md);
-  }
-
-  .section-title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .second-section-title{
-    font-size: var(--font-size-xl);
-  }
-
-  .section-title::after {
-    width: 430px;
-    height: 4px;
-  }
-
-  .second-section-title::after {
-    width: 435px;
-    height: 4px;
   }
 }
